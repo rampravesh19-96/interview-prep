@@ -1,12 +1,14 @@
+
 export const projectOverview = {
-  name: "B2B customer support platform",
+  name: "B2B customer support management application",
   description:
-    "A multi-tenant helpdesk SaaS application that helps organizations manage customer support in one place. Each organization’s data stays isolated from other tenants.",
+    "I have been working on a B2B customer support management application. It is a multi-tenant SaaS platform where different organizations can manage their customers, support tickets and support teams.",
   capabilities: [
-    "Customer and ticket management",
-    "Ticket assignment and status updates",
-    "Comments and collaboration",
-    "Users, roles, and access",
-    "Search, filters, and dashboards",
+    "Ticket management",
+    "Ticket assignment",
+    "Status updates",
+    "User roles",
+    "Search and filtering",
+    "Dashboards",
   ],
 };
