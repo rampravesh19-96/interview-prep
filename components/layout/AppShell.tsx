@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { NavigationItem, SectionId } from "../../types/interview";
 import { IntroductionSection } from "../../features/introduction/IntroductionSection";
 import { ProjectExperienceSection } from "../../features/project-experience/ProjectExperienceSection";
@@ -26,7 +27,7 @@ export function AppShell() {
       <a className="brand" href="#home" onClick={(event) => { event.preventDefault(); navigate("introduction"); }} aria-label="Interview Prep home"><span className="brand-mark"><BrandIcon /></span><span>Interview<span className="brand-light">Prep</span></span></a>
       <div className="workspace-label">YOUR WORKSPACE</div>
       <div className="profile-card"><div className="avatar">RS</div><div><strong>Ram Pravesh Singh</strong><span>Full Stack Developer</span></div><span className="profile-dot" aria-label="Personal workspace" /></div>
-      <nav className={`main-nav ${mobileNavOpen ? "nav-open" : ""}`} aria-label="Main navigation"><div className="nav-label">PREPARATION</div>{navigation.map((item) => <button type="button" key={item.id} className={`nav-item ${section === item.id ? "selected" : ""}`} aria-current={section === item.id ? "page" : undefined} onClick={() => navigate(item.id)}><NavIcon icon={item.icon} /><span>{item.label}</span>{section === item.id && <span className="nav-active-mark" />}</button>)}</nav>
+      <nav className={`main-nav ${mobileNavOpen ? "nav-open" : ""}`} aria-label="Main navigation"><div className="nav-label">PREPARATION</div>{navigation.map((item) => <button type="button" key={item.id} className={`nav-item ${section === item.id ? "selected" : ""}`} aria-current={section === item.id ? "page" : undefined} onClick={() => navigate(item.id)}><NavIcon icon={item.icon} /><span>{item.label}</span>{section === item.id && <span className="nav-active-mark" />}</button>)}<Link className="nav-item" href="/quick-revision"><NavIcon icon="code" /><span>Quick Revision</span></Link></nav>
       <div className="coming-block"><div className="coming-title"><span>COMING LATER</span><span className="soon-dot" /></div><div className="topic-list">{topics.map((topic) => <div key={topic} className="topic-item"><span className="topic-bullet" />{topic}<span className="lock-icon"><LockIcon /></span></div>)}</div><p>More topics, when you’re ready.</p></div>
       <div className="sidebar-footer"><div className="footer-spark">✳</div><span>Made for your next<br />great conversation.</span></div>
     </aside>

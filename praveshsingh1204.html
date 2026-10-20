@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ram Pravesh Singh - Full Stack Engineer Resume</title>
+ <style>
+  :root {
+    --ink: #152238;
+    --muted: #526173;
+    --accent: #174a7e;
+    --line: #d8e0e8;
+    --soft: #f4f7fa;
+    --paper: #fff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #e9eef3;
+    color: var(--ink);
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background: #152238;
+    color: #fff;
+  }
+
+  .toolbar button {
+    border: 0;
+    border-radius: 7px;
+    padding: 9px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #fff;
+    color: #152238;
+  }
+
+  .hint {
+    align-self: center;
+    font-size: 12px;
+    opacity: .88;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 9mm 13mm 8mm;
+    background: var(--paper);
+    box-shadow: 0 8px 28px rgba(15, 30, 50, .14);
+    position: relative;
+  }
+
+  .page + .page {
+    margin-top: 12px;
+  }
+
+  header {
+    border-bottom: 2.2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.02;
+    letter-spacing: .2px;
+    color: #10243b;
+  }
+
+  .role {
+    font-size: 12.3px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-top: 4px;
+    letter-spacing: .1px;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 10px;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 9.2px;
+  }
+
+  .contact span:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: #8b98a7;
+    border-radius: 50%;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-size: 10.8px;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+    margin: 5px 0 3px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  h2::after {
+    content: "";
+    height: 1px;
+    background: var(--line);
+    flex: 1;
+  }
+
+  p {
+    margin: 0 0 4px;
+  }
+
+  .summary {
+    font-size: 9.1px;
+    line-height: 1.25;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2px 7px;
+    margin-top: 2px;
+    font-size: 9px;
+    line-height: 1.24;
+  }
+
+  .skills b {
+    color: #24384f;
+  }
+
+  .skills span {
+    color: #36485c;
+  }
+
+  .job {
+    margin-bottom: 4px;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 1px;
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  .job-title {
+    font-size: 10.6px;
+    font-weight: 800;
+    color: #172a41;
+  }
+
+  .company {
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .date {
+    font-size: 8.8px;
+    color: var(--muted);
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  ul {
+    margin: 2px 0 0 14px;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 0 1px;
+    padding-left: 1px;
+    orphans: 2;
+    widows: 2;
+  }
+
+  .job li {
+    font-size: 8.65px;
+    line-height: 1.22;
+  }
+
+  .tech {
+    margin-top: 2px;
+    padding: 2px 6px;
+    background: var(--soft);
+    border-left: 2.5px solid #8aa7c3;
+    color: #40546a;
+    font-size: 8.35px;
+    line-height: 1.22;
+  }
+
+  .project-grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .project {
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 5px 6px;
+    background: #fff;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .project h3 {
+    font-size: 9.8px;
+    line-height: 1.2;
+    margin: 0 0 3px;
+    color: #173f69;
+  }
+
+  .project p {
+    font-size: 8.7px;
+    line-height: 1.27;
+    color: #3c4c5f;
+    margin: 0;
+  }
+
+  .project .stack {
+    font-size: 8.15px;
+    line-height: 1.23;
+    font-weight: 700;
+    color: #5a6b7d;
+    margin-top: 3px;
+  }
+
+  .edu {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .edu b {
+    font-size: 10px;
+  }
+
+  .small {
+    font-size: 8.8px;
+    color: var(--muted);
+  }
+
+  .footer {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    border-top: 1px solid var(--line);
+    padding-top: 3px;
+    margin-top: 5mm;
+    color: #7a8794;
+    font-size: 7.8px;
+  }
+
+  .page-two {
+    padding-top: 9mm;
+  }
+
+  .project-grid-p1 .project {
+    padding: 4px 6px;
+  }
+
+  .project-grid-p1 .project p {
+    font-size: 8.5px;
+    line-height: 1.23;
+  }
+
+  .project-grid-p1 .project .stack {
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  .strength-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-top: 2px;
+  }
+
+  .strength-grid > div {
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 5px 6px;
+    background: var(--soft);
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .strength-grid b {
+    display: block;
+    color: #173f69;
+    font-size: 9.1px;
+    margin-bottom: 2px;
+  }
+
+  .strength-grid span {
+    font-size: 8.5px;
+    line-height: 1.27;
+    color: #40546a;
+  }
+
+  .value-list {
+    margin-top: 2px;
+  }
+
+  .value-list li {
+    font-size: 8.65px;
+    line-height: 1.23;
+    margin-bottom: 1.5px;
+  }
+
+  .closing-band {
+    margin-top: 5px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 7px;
+    font-size: 8.5px;
+    line-height: 1.28;
+    color: #40546a;
+  }
+
+  .closing-band b {
+    color: #173f69;
+  }
+
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    html,
+    body {
+      width: 210mm !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #fff !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-size: 8.5px;
+      line-height: 1.2;
+    }
+
+    .toolbar {
+      display: none !important;
+    }
+
+    /*
+      Each .page is one intended A4 sheet.
+      Avoid extra page margins and duplicate top spacing.
+    */
+    .page {
+      display: block !important;
+      width: 210mm !important;
+      height: 297mm !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 7mm 12mm 6mm !important;
+      box-shadow: none !important;
+      overflow: hidden !important;
+      position: relative !important;
+      break-after: page !important;
+      page-break-after: always !important;
+    }
+
+    .page + .page {
+      margin: 0 !important;
+      padding-top: 7mm !important;
+    }
+
+    .page-two {
+      padding-top: 7mm !important;
+    }
+
+    /*
+      Keep the footer inside the sheet and prevent
+      its margin from creating an additional page.
+    */
+    .footer {
+      position: static !important;
+      margin-top: 3mm !important;
+      padding-top: 2px !important;
+      break-inside: avoid-page !important;
+      page-break-inside: avoid !important;
+    }
+
+    header {
+      margin-bottom: 4px !important;
+      padding-bottom: 4px !important;
+    }
+
+    h1 {
+      font-size: 24px !important;
+    }
+
+    .role {
+      font-size: 11.5px !important;
+      margin-top: 3px !important;
+    }
+
+    .contact {
+      font-size: 8.5px !important;
+      gap: 2px 8px !important;
+      margin-top: 4px !important;
+    }
+
+    .contact span:not(:last-child)::after {
+      margin-left: 8px !important;
+    }
+
+    h2 {
+      font-size: 9.8px !important;
+      margin: 4px 0 2px !important;
+      break-after: avoid-page !important;
+      page-break-after: avoid !important;
+    }
+
+    .summary {
+      font-size: 8.3px !important;
+      line-height: 1.17 !important;
+    }
+
+    .skills {
+      grid-template-columns: 92px 1fr !important;
+      gap: 1px 6px !important;
+      font-size: 8px !important;
+      line-height: 1.14 !important;
+    }
+
+    .job {
+      margin-bottom: 2.5px !important;
+    }
+
+    .job-head {
+      margin-bottom: 1px !important;
+    }
+
+    .job-title {
+      font-size: 9.6px !important;
+    }
+
+    .company {
+      font-size: 8.6px !important;
+    }
+
+    .date {
+      font-size: 8px !important;
+    }
+
+    ul {
+      margin: 1px 0 0 12px !important;
+    }
+
+    .job li {
+      font-size: 7.75px !important;
+      line-height: 1.13 !important;
+      margin-bottom: .5px !important;
+    }
+
+    .tech {
+      font-size: 7.55px !important;
+      line-height: 1.13 !important;
+      padding: 1.5px 4px !important;
+      margin-top: 1.5px !important;
+    }
+
+    .project-grid {
+      gap: 4px !important;
+    }
+
+    .project {
+      padding: 4px 5px !important;
+      break-inside: avoid-page !important;
+      page-break-inside: avoid !important;
+    }
+
+    .project h3 {
+      font-size: 9px !important;
+      margin-bottom: 2px !important;
+    }
+
+    .project p {
+      font-size: 8px !important;
+      line-height: 1.17 !important;
+    }
+
+    .project .stack {
+      font-size: 7.5px !important;
+      line-height: 1.15 !important;
+      margin-top: 2px !important;
+    }
+
+    .project-grid-p1 .project p {
+      font-size: 7.9px !important;
+      line-height: 1.15 !important;
+    }
+
+    .project-grid-p1 .project .stack {
+      font-size: 7.4px !important;
+      line-height: 1.13 !important;
+    }
+
+    .strength-grid {
+      gap: 4px !important;
+    }
+
+    .strength-grid > div {
+      padding: 4px 5px !important;
+      break-inside: avoid-page !important;
+      page-break-inside: avoid !important;
+    }
+
+    .strength-grid b {
+      font-size: 8.5px !important;
+      margin-bottom: 1px !important;
+    }
+
+    .strength-grid span {
+      font-size: 7.9px !important;
+      line-height: 1.17 !important;
+    }
+
+    .edu b {
+      font-size: 9px !important;
+    }
+
+    .small {
+      font-size: 8px !important;
+    }
+
+    .value-list {
+      margin-top: 1px !important;
+    }
+
+    .value-list li {
+      font-size: 7.9px !important;
+      line-height: 1.15 !important;
+      margin-bottom: 1px !important;
+    }
+
+    .closing-band {
+      margin-top: 4px !important;
+      padding: 4px 0 !important;
+      grid-template-columns: 100px 1fr !important;
+      gap: 5px !important;
+      font-size: 7.8px !important;
+      line-height: 1.17 !important;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .page {
+      width: 210mm;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .toolbar {
+      position: relative;
+      flex-wrap: wrap;
+    }
+  }
+
+  /* FIX: Fill page 1 better without changing page 2 */
+@media print {
+  .page:first-of-type {
+    padding-top: 9mm !important;
+    padding-bottom: 8mm !important;
+  }
+
+  .page:first-of-type header {
+    margin-bottom: 7px !important;
+    padding-bottom: 6px !important;
+  }
+
+  .page:first-of-type h2 {
+    margin-top: 7px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .page:first-of-type .summary {
+    line-height: 1.28 !important;
+  }
+
+  .page:first-of-type .skills {
+    row-gap: 3px !important;
+    line-height: 1.22 !important;
+  }
+
+  .page:first-of-type .job {
+    margin-bottom: 5px !important;
+  }
+
+  .page:first-of-type .job li {
+    line-height: 1.22 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .page:first-of-type .tech {
+    margin-top: 3px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+
+  .page:first-of-type .project-grid {
+    gap: 7px !important;
+  }
+
+  .page:first-of-type .project {
+    padding: 6px 7px !important;
+  }
+
+  .page:first-of-type .project p {
+    line-height: 1.3 !important;
+  }
+
+  .page:first-of-type .project .stack {
+    line-height: 1.25 !important;
+    margin-top: 4px !important;
+  }
+
+  .page:first-of-type .footer {
+    margin-top: 5mm !important;
+  }
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">Print / Save as PDF</button>
+    <div class="hint">A4 • 2 pages • Background graphics ON recommended</div>
+  </div>
+
+  <section class="page">
+    <header>
+      <h1>Ram Pravesh Singh</h1>
+      <div class="role">Full Stack Engineer · 4+ Years</div>
+
+<div class="contact">
+  <span>Bengaluru, Karnataka, India</span>
+  <span>+91 8969033644</span>
+  <span>
+    <a href="mailto:praveshsingh1204@gmail.com">praveshsingh1204@gmail.com</a>
+  </span>
+  <span>
+    <a href="https://linkedin.com/in/ram-pravesh-singh"
+       target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </span>
+  <span>
+    <a href="https://github.com/rampravesh19-96"
+       target="_blank" rel="noopener noreferrer">GitHub</a>
+  </span>
+  <span>
+    <a href="https://portfolio-tau-seven-914fczolx3.vercel.app"
+       target="_blank" rel="noopener noreferrer">Portfolio</a>
+  </span>
+</div>
+
+    </header>
+
+    <h2>Professional Summary</h2>
+    <p class="summary">Full Stack Engineer with 4+ years of experience building production-grade B2B SaaS and product applications with React.js, Next.js, TypeScript, Node.js, Express.js, and NestJS. Owns features end to end—from responsive interfaces and APIs to PostgreSQL/MySQL data models, testing, AWS deployment, and production support. Experienced in cloud-native delivery, payments, realtime workflows, and practical AI/LLM-enabled product capabilities.</p>
+
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <b>Frontend</b>
+      <span>React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Redux Toolkit, TanStack Query</span>
+
+      <b>Backend &amp; APIs</b>
+      <span>Node.js, Express.js, NestJS, REST APIs, GraphQL, WebSockets, Authentication, RBAC, OAuth</span>
+
+      <b>Data &amp; Systems</b>
+      <span>PostgreSQL, MySQL, Redis, Prisma ORM, pgvector, caching, background jobs, queues, webhooks</span>
+
+      <b>Cloud &amp; Delivery</b>
+      <span>AWS (EC2, S3, RDS, CloudWatch), Docker, GitHub Actions, CI/CD, Vercel, Linux, Nginx</span>
+
+      <b>Testing</b>
+      <span>Jest, Vitest, React Testing Library, Playwright, API integration testing</span>
+
+      <b>AI-enabled Products</b>
+      <span>LLM APIs, Gemini, OpenAI-compatible APIs, RAG, embeddings, vector search, streaming responses, structured outputs, tool/function calling</span>
+    </div>
+
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <div class="job-title">Sachram technologies</div>
+          <div class="company">Full Stack Engineer</div>
+        </div>
+        <div class="date">Oct 2025 – Oct 2026<br>Noida, India · Hybrid</div>
+      </div>
+      <ul>
+        <li>Own end-to-end features for a multi-tenant B2B SaaS platform spanning commerce, payments, workflow automation, and analytics using React.js, Next.js, TypeScript, Node.js, and NestJS.</li>
+        <li>Build responsive, data-intensive interfaces and REST/GraphQL APIs; design PostgreSQL schemas and Prisma data access for complex product workflows.</li>
+        <li>Implement authentication, tenant-aware RBAC, audit logs, and Stripe/Razorpay subscription and payment flows with webhook-driven state transitions.</li>
+        <li>Deliver realtime updates and durable background processing with WebSockets, Redis, queues, retries, and idempotent job handling.</li>
+        <li>Optimize production paths through query analysis, indexing, pagination, and caching; ship Dockerized services through GitHub Actions to AWS with CloudWatch observability.</li>
+        <li>Develop AI-enabled workflows using LLM APIs, RAG, embeddings, pgvector, streaming responses, structured outputs, and tool calling; contribute tests, reviews, releases, and production debugging.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <div class="job-title">Pax Innovation Ict Services pvt ltd • Bengaluru</div>
+          <div class="company">Full Stack Developer</div>
+        </div>
+        <div class="date">Jul 2024 – Sep 2025<br>Bengaluru, India · Hybrid</div>
+      </div>
+      <ul>
+        <li>Shipped customer-facing B2B SaaS features with React, TypeScript, Node.js, Express.js, and MySQL, including dashboards, forms, data tables, analytics, and RBAC-aware interfaces.</li>
+        <li>Designed REST APIs for authentication and business workflows, integrating file storage and transactional email with validation and consistent error handling.</li>
+        <li>Evolved the data layer to PostgreSQL and Prisma through schema migrations, transactions, and indexing for reliable, maintainable application flows.</li>
+        <li>Implemented Redis-backed jobs, OAuth integrations, webhooks, retries, audit logs, and rate limiting for asynchronous and third-party workflows.</li>
+        <li>Supported Next.js modernization and Docker-based CI/CD on AWS, resolving frontend, API, and database issues through production debugging.</li>
+      </ul>
+    </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Full Stack Developer</div>
+            <div class="company">
+              Axionbots Software Private Limited • Chennai
+            </div>
+          </div>
+          <div class="date">Nov 2023 – April 2024</div>
+        </div>
+        <ul>
+          <li>
+            Built full-stack modules using React.js, Node.js, Express.js,
+            MongoDB and MySQL, covering authenticated dashboards, workflow-heavy
+            forms, reusable tables, search/filter experiences and role-aware
+            navigation.
+          </li>
+          <li>
+            Developed REST APIs with validation, service-layer separation, JWT
+            authentication, RBAC, pagination, filtering, audit-friendly flows
+            and standardized error contracts.
+          </li>
+          <li>
+            Worked on real-time and asynchronous backend patterns using
+            WebSockets, Redis and event-driven processing concepts; optimized
+            SQL/NoSQL queries, indexes and data-access paths for
+            performance-sensitive screens.
+          </li>
+          <li>
+            Supported Dockerized deployments, AWS-hosted workloads, GitHub
+            Actions, Nginx/PM2, environment configuration, logging, debugging
+            and production support.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Full Stack Developer Intern</div>
+            <div class="company">
+              Axionbots Software Private Limited • Chennai
+            </div>
+          </div>
+          <div class="date">May 2023 – Oct 2024</div>
+        </div>
+        <ul>
+          <li>
+            Contributed to full-stack web application development using
+            React.js, JavaScript, HTML5, CSS3, Node.js, and Express.js.
+            Developed reusable UI components, forms, navigation elements,
+            tables, dashboard modules, and responsive layouts.
+          </li>
+          <li>
+            Assisted in developing RESTful APIs using Node.js and Express.js,
+            implementing routing, request handling, CRUD operations, API
+            responses, and integration between frontend components and backend
+            services.
+          </li>
+          <li>
+            Worked with MongoDB for data storage, basic schema design, queries,
+            and database integration. Integrated frontend components with APIs
+            using Fetch API and asynchronous JavaScript, handling form
+            validation, loading indicators, and error states.
+          </li>
+          <li>
+            Used Flexbox, CSS Grid, and responsive styling to improve user
+            interfaces across devices. Practiced Git version control, debugging,
+            testing, and browser developer tools while participating in code
+            reviews, bug fixing, and feature enhancements under senior developer
+            guidance.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Software Developer Intern</div>
+            <div class="company">Giggso India Private Limited • Chennai</div>
+          </div>
+          <div class="date">Apr 2023 – May 2023</div>
+        </div>
+        <ul>
+          <li>
+            Worked as a Software Developer Intern, developing responsive web
+            pages, reusable UI components, forms, navigation elements, and
+            interactive features using JavaScript, React.js, HTML5, and CSS3.
+            Implemented client-side validation, event handling, Flexbox, and CSS
+            Grid to improve user experience across different screen sizes.
+          </li>
+          <li>
+            Assisted in REST API integration using Fetch API and asynchronous
+            JavaScript, handling data rendering, loading states, and error
+            messages. Used Git for version control and contributed to debugging,
+            browser testing, bug fixing, documentation, and feature enhancements
+            in collaboration with the development team.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Software Developer Intern</div>
+            <div class="company">Giottus Technology • Chennai</div>
+          </div>
+          <div class="date">June 2022 – Apr 2023</div>
+        </div>
+        <ul>
+          <li>
+            Developed responsive web applications using JavaScript, React.js,
+            HTML5, and CSS3. Built reusable UI components, forms, tables,
+            navigation elements, and data-display screens to support application
+            functionality.
+          </li>
+          <li>
+            Implemented component state management, event handling, conditional
+            rendering, client-side validation, and interactive features.
+            Improved responsive layouts using Flexbox, CSS Grid, and reusable
+            styling patterns.
+          </li>
+          <li>
+            Assisted in integrating REST APIs with frontend components using
+            asynchronous JavaScript. Handled API requests and responses, data
+            rendering, loading indicators, error messages, and supported API
+            debugging and cross-browser testing.
+          </li>
+          <li>
+            Used Git for version control and participated in code reviews,
+            testing, bug fixing, and feature enhancements. Collaborated with the
+            development team to implement requirements, troubleshoot frontend
+            issues, and maintain code quality.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+     <h2 style="margin-top:0">Selected Projects</h2>
+
+    <div class="project-grid">
+      <div class="project">
+        <h3>CreativeFlow AI — AI Creative Production Workspace</h3>
+        <p>Built a full-stack workspace for persistent campaigns, structured strategy and copy generation, multimodal visual generation, human review, approval, and versioned assets.</p>
+        <p class="stack">React, TypeScript, Vite, Node.js, Express.js, PostgreSQL, Clerk, Zod, Gemini, Clipdrop, Cloudinary</p>
+        <p class="stack">Live Demo · GitHub</p>
+        <p style="margin-top:3px">Designed provider orchestration and persisted generation runs with history plus model, latency, token, usage, and cost metadata when available; deployed the production application.</p>
+      </div>
+            <div class="project">
+        <h3>ContextOS — AI Knowledge &amp; RAG Platform</h3>
+        <p>Engineered a multi-tenant knowledge platform with authentication, document ingestion, background processing, embeddings, semantic vector search, and source-grounded RAG.</p>
+        <p class="stack">Next.js, TypeScript, NestJS, PostgreSQL, Prisma, Redis, OpenAI-compatible APIs, pgvector</p>
+        <p class="stack">Live Demo · GitHub</p>
+        <p style="margin-top:3px">Implemented streaming chat with citations, persisted conversations, analytics, testing, and production deployment.</p>
+      </div>
+      </div>
+  </section>
+
+  <section class="page page-two">
+    <div class="project-grid">
+
+      <div class="project">
+        <h3>ForgeBoard — Realtime Project Management SaaS</h3>
+        <p>Developed multi-tenant project and task workflows with persistent realtime Kanban collaboration over WebSockets.</p>
+        <p class="stack">Next.js, TypeScript, NestJS, PostgreSQL, Prisma, Redis, Socket.IO, Docker</p>
+        <p class="stack">Live Demo · GitHub</p>
+        <p style="margin-top:3px">Added automated testing, containerized services, CI/CD, and cloud deployment for a production-oriented delivery path.</p>
+      </div>
+
+      <div class="project">
+        <h3>CommerceFlow — Full-Stack eCommerce Platform</h3>
+        <p>Created product, order, and admin operations with transactional checkout, payment workflows, and reliable webhook processing.</p>
+        <p class="stack">Next.js, TypeScript, NestJS, PostgreSQL, Prisma, Redis, Docker, CI/CD</p>
+        <p class="stack">Live Demo · GitHub</p>
+        <p style="margin-top:3px">Applied database optimization, Redis-backed processing, Docker, CI/CD, and production deployment practices.</p>
+      </div>
+    </div>
+
+    <h2>Additional Engineering Projects</h2>
+    <ul class="value-list">
+      <li><b>React UI Kit</b> — Accessible React + TypeScript library with 19 reusable components, responsive design, dark mode, interactive documentation, Vitest, and Testing Library. Live Demo · GitHub</li>
+      <li><b>Node Service Template</b> — Production-oriented NestJS template with PostgreSQL, Prisma, Redis, JWT access/refresh authentication, BullMQ, structured logging, Docker, automated testing, and CI. GitHub</li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="edu">
+      <div>
+        <b>Rajiv Gandhi Proudyogiki Vishwavidyalaya</b>
+        <div class="small">B.Tech, Computer Science &amp; Engineering</div>
+      </div>
+      <div class="date">2018 – 2022<br>CGPA: 8.4/10</div>
+    </div>
+
+    <h2>Certification</h2>
+    <div class="edu">
+      <div>
+        <b>AWS Certified Developer – Associate</b>
+        <div class="small">Amazon Web Services (AWS)</div>
+      </div>
+      <div class="date">Issued Aug 2025<br>Expires Aug 2028</div>
+    </div>
+
+    <h2>Languages</h2>
+    <p class="summary">English: Professional Working Proficiency · Hindi: Native / Bilingual Proficiency</p>
+  </section>
+
+  <script>
+    document.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {}
+    });
+  </script>
+</body>
+</html>

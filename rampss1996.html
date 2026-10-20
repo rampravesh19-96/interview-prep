@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ram Pravesh Singh - Frontend Developer Resume</title>
+    <style>
+      :root {
+        --ink: #152238;
+        --muted: #526173;
+        --accent: #174a7e;
+        --line: #d8e0e8;
+        --soft: #f4f7fa;
+        --paper: #fff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e9eef3;
+        color: var(--ink);
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body {
+        font-size: 10px;
+        line-height: 1.3;
+      }
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        background: #152238;
+        color: #fff;
+      }
+      .toolbar button {
+        border: 0;
+        border-radius: 7px;
+        padding: 9px 16px;
+        font-weight: 700;
+        cursor: pointer;
+        background: #fff;
+        color: #152238;
+      }
+      .hint {
+        align-self: center;
+        font-size: 12px;
+        opacity: 0.88;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 12px auto;
+        padding: 9mm 13mm 8mm;
+        background: var(--paper);
+        box-shadow: 0 8px 28px rgba(15, 30, 50, 0.14);
+        position: relative;
+      }
+      .page + .page {
+        margin-top: 12px;
+      }
+      header {
+        border-bottom: 2.2px solid var(--accent);
+        padding-bottom: 5px;
+        margin-bottom: 6px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.02;
+        letter-spacing: 0.2px;
+        color: #10243b;
+      }
+      .role {
+        font-size: 12.3px;
+        font-weight: 800;
+        color: var(--accent);
+        margin-top: 4px;
+        letter-spacing: 0.1px;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px 10px;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 9.2px;
+      }
+      .contact span:not(:last-child)::after {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        background: #8b98a7;
+        border-radius: 50%;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+      h2 {
+        font-size: 10.8px;
+        text-transform: uppercase;
+        letter-spacing: 0.9px;
+        margin: 5px 0 3px;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        break-after: avoid-page;
+        page-break-after: avoid;
+      }
+      h2::after {
+        content: "";
+        height: 1px;
+        background: var(--line);
+        flex: 1;
+      }
+      p {
+        margin: 0 0 4px;
+      }
+      .summary {
+        font-size: 9.1px;
+        line-height: 1.25;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 2px 7px;
+        margin-top: 2px;
+        font-size: 9px;
+        line-height: 1.24;
+      }
+      .skills b {
+        color: #24384f;
+      }
+      .skills span {
+        color: #36485c;
+      }
+      .job {
+        margin-bottom: 4px;
+        break-inside: auto;
+        page-break-inside: auto;
+      }
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: flex-start;
+        margin-bottom: 1px;
+        break-after: avoid-page;
+        page-break-after: avoid;
+      }
+      .job-title {
+        font-size: 10.6px;
+        font-weight: 800;
+        color: #172a41;
+      }
+      .company {
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .date {
+        font-size: 8.8px;
+        color: var(--muted);
+        white-space: nowrap;
+        text-align: right;
+      }
+      ul {
+        margin: 2px 0 0 14px;
+        padding: 0;
+      }
+      li {
+        margin: 0 0 1px;
+        padding-left: 1px;
+        orphans: 2;
+        widows: 2;
+      }
+      .job li {
+        font-size: 8.65px;
+        line-height: 1.22;
+      }
+      .tech {
+        margin-top: 2px;
+        padding: 2px 6px;
+        background: var(--soft);
+        border-left: 2.5px solid #8aa7c3;
+        color: #40546a;
+        font-size: 8.35px;
+        line-height: 1.22;
+      }
+      .project-grid {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+      .project {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        padding: 5px 6px;
+        background: #fff;
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+      }
+      .project h3 {
+        font-size: 9.8px;
+        line-height: 1.2;
+        margin: 0 0 3px;
+        color: #173f69;
+      }
+      .project p {
+        font-size: 8.7px;
+        line-height: 1.27;
+        color: #3c4c5f;
+        margin: 0;
+      }
+      .project .stack {
+        font-size: 8.15px;
+        line-height: 1.23;
+        font-weight: 700;
+        color: #5a6b7d;
+        margin-top: 3px;
+      }
+      .edu {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .edu b {
+        font-size: 10px;
+      }
+      .small {
+        font-size: 8.8px;
+        color: var(--muted);
+      }
+      .footer {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        border-top: 1px solid var(--line);
+        padding-top: 3px;
+        margin-top: 5mm;
+        color: #7a8794;
+        font-size: 7.8px;
+      }
+      .page-two {
+        padding-top: 9mm;
+      }
+      .project-grid-p1 .project {
+        padding: 4px 6px;
+      }
+      .project-grid-p1 .project p {
+        font-size: 8.5px;
+        line-height: 1.23;
+      }
+      .project-grid-p1 .project .stack {
+        font-size: 8px;
+        line-height: 1.2;
+      }
+      .strength-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        margin-top: 2px;
+      }
+      .strength-grid > div {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        padding: 5px 6px;
+        background: var(--soft);
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+      }
+      .strength-grid b {
+        display: block;
+        color: #173f69;
+        font-size: 9.1px;
+        margin-bottom: 2px;
+      }
+      .strength-grid span {
+        font-size: 8.5px;
+        line-height: 1.27;
+        color: #40546a;
+      }
+      .value-list {
+        margin-top: 2px;
+      }
+      .value-list li {
+        font-size: 8.65px;
+        line-height: 1.23;
+        margin-bottom: 1.5px;
+      }
+      .closing-band {
+        margin-top: 5px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 5px 0;
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        gap: 7px;
+        font-size: 8.5px;
+        line-height: 1.28;
+        color: #40546a;
+      }
+      .closing-band b {
+        color: #173f69;
+      }
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 0;
+        }
+        html,
+        body {
+          width: 210mm !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          background: #fff !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        body {
+          font-size: 8.5px;
+          line-height: 1.2;
+        }
+        .toolbar {
+          display: none !important;
+        }
+        .page {
+          display: block !important;
+          width: 210mm !important;
+          height: 297mm !important;
+          min-height: 0 !important;
+          margin: 0 !important;
+          padding: 7mm 12mm 6mm !important;
+          box-shadow: none !important;
+          overflow: hidden !important;
+          position: relative !important;
+          break-after: page !important;
+          page-break-after: always !important;
+        }
+        .page + .page {
+          margin: 0 !important;
+          padding-top: 7mm !important;
+        }
+        .page-two {
+          padding-top: 7mm !important;
+        }
+        .footer {
+          position: static !important;
+          margin-top: 3mm !important;
+          padding-top: 2px !important;
+          break-inside: avoid-page !important;
+          page-break-inside: avoid !important;
+        }
+        header {
+          margin-bottom: 4px !important;
+          padding-bottom: 4px !important;
+        }
+        h1 {
+          font-size: 24px !important;
+        }
+        .role {
+          font-size: 11.5px !important;
+          margin-top: 3px !important;
+        }
+        .contact {
+          font-size: 8.5px !important;
+          gap: 2px 8px !important;
+          margin-top: 4px !important;
+        }
+        .contact span:not(:last-child)::after {
+          margin-left: 8px !important;
+        }
+        h2 {
+          font-size: 9.8px !important;
+          margin: 4px 0 2px !important;
+          break-after: avoid-page !important;
+          page-break-after: avoid !important;
+        }
+        .summary {
+          font-size: 8.3px !important;
+          line-height: 1.17 !important;
+        }
+        .skills {
+          grid-template-columns: 92px 1fr !important;
+          gap: 1px 6px !important;
+          font-size: 8px !important;
+          line-height: 1.14 !important;
+        }
+        .job {
+          margin-bottom: 2.5px !important;
+        }
+        .job-head {
+          margin-bottom: 1px !important;
+        }
+        .job-title {
+          font-size: 9.6px !important;
+        }
+        .company {
+          font-size: 8.6px !important;
+        }
+        .date {
+          font-size: 8px !important;
+        }
+        ul {
+          margin: 1px 0 0 12px !important;
+        }
+        .job li {
+          font-size: 7.75px !important;
+          line-height: 1.13 !important;
+          margin-bottom: 0.5px !important;
+        }
+        .tech {
+          font-size: 7.55px !important;
+          line-height: 1.13 !important;
+          padding: 1.5px 4px !important;
+          margin-top: 1.5px !important;
+        }
+        .project-grid {
+          gap: 4px !important;
+        }
+        .project {
+          padding: 4px 5px !important;
+          break-inside: avoid-page !important;
+          page-break-inside: avoid !important;
+        }
+        .project h3 {
+          font-size: 9px !important;
+          margin-bottom: 2px !important;
+        }
+        .project p {
+          font-size: 8px !important;
+          line-height: 1.17 !important;
+        }
+        .project .stack {
+          font-size: 7.5px !important;
+          line-height: 1.15 !important;
+          margin-top: 2px !important;
+        }
+        .project-grid-p1 .project p {
+          font-size: 7.9px !important;
+          line-height: 1.15 !important;
+        }
+        .project-grid-p1 .project .stack {
+          font-size: 7.4px !important;
+          line-height: 1.13 !important;
+        }
+        .strength-grid {
+          gap: 4px !important;
+        }
+        .strength-grid > div {
+          padding: 4px 5px !important;
+          break-inside: avoid-page !important;
+          page-break-inside: avoid !important;
+        }
+        .strength-grid b {
+          font-size: 8.5px !important;
+          margin-bottom: 1px !important;
+        }
+        .strength-grid span {
+          font-size: 7.9px !important;
+          line-height: 1.17 !important;
+        }
+        .edu b {
+          font-size: 9px !important;
+        }
+        .small {
+          font-size: 8px !important;
+        }
+        .value-list {
+          margin-top: 1px !important;
+        }
+        .value-list li {
+          font-size: 7.9px !important;
+          line-height: 1.15 !important;
+          margin-bottom: 1px !important;
+        }
+        .closing-band {
+          margin-top: 4px !important;
+          padding: 4px 0 !important;
+          grid-template-columns: 100px 1fr !important;
+          gap: 5px !important;
+          font-size: 7.8px !important;
+          line-height: 1.17 !important;
+        }
+        .page:first-of-type {
+          padding-top: 9mm !important;
+          padding-bottom: 8mm !important;
+        }
+        .page:first-of-type header {
+          margin-bottom: 7px !important;
+          padding-bottom: 6px !important;
+        }
+        .page:first-of-type h2 {
+          margin-top: 7px !important;
+          margin-bottom: 4px !important;
+        }
+        .page:first-of-type .summary {
+          line-height: 1.28 !important;
+        }
+        .page:first-of-type .skills {
+          row-gap: 3px !important;
+          line-height: 1.22 !important;
+        }
+        .page:first-of-type .job {
+          margin-bottom: 5px !important;
+        }
+        .page:first-of-type .job li {
+          line-height: 1.22 !important;
+          margin-bottom: 1px !important;
+        }
+        .page:first-of-type .tech {
+          margin-top: 3px !important;
+          padding-top: 2px !important;
+          padding-bottom: 2px !important;
+          line-height: 1.2 !important;
+        }
+        .page:first-of-type .project-grid {
+          gap: 7px !important;
+        }
+        .page:first-of-type .project {
+          padding: 6px 7px !important;
+        }
+        .page:first-of-type .project p {
+          line-height: 1.3 !important;
+        }
+        .page:first-of-type .project .stack {
+          line-height: 1.25 !important;
+          margin-top: 4px !important;
+        }
+        .page:first-of-type .footer {
+          margin-top: 5mm !important;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .page {
+          width: 210mm;
+          max-width: 100%;
+          overflow-x: auto;
+        }
+        .toolbar {
+          position: relative;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button onclick="window.print()">Print / Save as PDF</button>
+      <div class="hint">A4 • 2 pages • Background graphics ON recommended</div>
+    </div>
+
+    <section class="page">
+      <header>
+        <h1>RAM PRAVESH SINGH</h1>
+        <div class="role">
+          Frontend Developer | React.js • Next.js • Angular • Vue.js •
+          JavaScript • TypeScript • React Native • UI Engineering
+        </div>
+        <div class="contact">
+          <span>Noida, India</span>
+          <span>+91 7320863504</span>
+          <span>rampss1996@gmail.com</span>
+          <span>4+ Years Experience</span>
+          <span>15 Days or Less Notice</span>
+        </div>
+      </header>
+
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Frontend Developer with <b>4+ years of experience</b> building scalable,
+        responsive and high-performance web and mobile applications using
+        <b
+          >JavaScript, TypeScript, React.js, Next.js, Angular, Vue.js, Nuxt.js
+          and React Native</b
+        >. Skilled in component-driven architecture, Redux Toolkit, Zustand,
+        TanStack Query, RxJS, NgRx, Pinia, SPA, PWA, SSR, SSG, ISR, Micro
+        Frontends, Module Federation, Design Systems and Storybook. Strong in
+        REST/GraphQL integration, WebSockets, responsive UI, accessibility,
+        WCAG, Core Web Vitals, frontend performance and automated testing across
+        SaaS, e-commerce, TravelTech, FinTech, dashboards and real-time
+        applications.
+      </p>
+
+      <h2>Core Technical Skills</h2>
+      <div class="skills">
+        <b>Core Frontend</b
+        ><span
+          >JavaScript ES6+, TypeScript, HTML5, CSS3, Sass/SCSS, JSX/TSX,
+          Responsive Design, Browser APIs</span
+        >
+        <b>React Ecosystem</b
+        ><span
+          >React.js, Next.js, Redux Toolkit, Zustand, Context API, TanStack
+          Query, React Router, React Hook Form, SSR, SSG, ISR</span
+        >
+        <b>Angular / Vue</b
+        ><span
+          >Angular, RxJS, NgRx, Angular Material, Signals, Vue.js, Vue 3,
+          Nuxt.js, Pinia, Vue Router, Composition API</span
+        >
+        <b>UI / Mobile</b
+        ><span
+          >React Native, Expo, Ionic, Capacitor, Tailwind CSS, Material UI,
+          Bootstrap, Vuetify, Storybook, Design Systems</span
+        >
+        <b>Architecture & APIs</b
+        ><span
+          >SPA, PWA, Micro Frontends, Module Federation, REST API, GraphQL,
+          Apollo Client, WebSockets, Socket.IO, JWT/OAuth</span
+        >
+        <b>Performance & QA</b
+        ><span
+          >Core Web Vitals, Lighthouse, Accessibility, WCAG/ARIA, Jest, Vitest,
+          React Testing Library, Cypress, Playwright</span
+        >
+        <b>Tooling</b
+        ><span
+          >Vite, Webpack, Babel, npm, pnpm, ESLint, Prettier, Git, GitHub,
+          CI/CD, Figma-to-Code</span
+        >
+      </div>
+
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Frontend Developer</div>
+            <div class="company">Sachram Technologies • Noida</div>
+          </div>
+          <div class="date">Oct 2025 – Oct 2026</div>
+        </div>
+        <ul>
+          <li>
+            Build scalable web applications using React.js, Next.js, Angular,
+            Vue.js, JavaScript and TypeScript with reusable component-driven UI
+            architecture.
+          </li>
+          <li>
+            Develop React/Next.js experiences using Hooks, Redux Toolkit,
+            Zustand, TanStack Query, App Router, Server/Client Components, SSR,
+            SSG and ISR.
+          </li>
+          <li>
+            Build Angular modules with RxJS, NgRx, Angular Material, Reactive
+            Forms, Signals, guards and interceptors, plus Vue/Nuxt interfaces
+            using Composition API and Pinia.
+          </li>
+          <li>
+            Develop Design Systems, Storybook component libraries, responsive
+            dashboards and Micro Frontends using Module Federation and shared UI
+            patterns.
+          </li>
+          <li>
+            Integrate REST, GraphQL and WebSocket services with JWT/OAuth,
+            role-aware UI, complex forms, real-time experiences and API-driven
+            state management.
+          </li>
+          <li>
+            Optimize Core Web Vitals through lazy loading, code splitting,
+            caching, image/bundle optimization and efficient rendering while
+            improving accessibility and cross-browser behavior.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js • Next.js • Angular • Vue.js • TypeScript
+          • Redux Toolkit • RxJS • NgRx • Pinia • Tailwind CSS • Storybook •
+          Micro Frontends • REST • GraphQL • WebSockets • PWA
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Frontend Developer</div>
+            <div class="company">Pax Innovation Ict Services pvt ltd • Bengaluru</div>
+          </div>
+          <div class="date">Jul 2024 – Sep 2025</div>
+        </div>
+        <ul>
+          <li>
+            Delivered TravelTech interfaces covering flight/hotel search,
+            availability, traveller details, fares, booking, checkout, payments,
+            confirmations, cancellations and post-booking workflows.
+          </li>
+          <li>
+            Built React.js/Next.js applications with TypeScript, Redux Toolkit,
+            Zustand and TanStack Query for complex forms, server state, caching,
+            retries and API-driven journeys.
+          </li>
+          <li>
+            Developed Angular/RxJS/NgRx modules and Vue/Nuxt interfaces using
+            reusable components, Composition API and Pinia.
+          </li>
+          <li>
+            Built responsive forms, data tables, filters, date pickers,
+            autocomplete, notifications and role-aware navigation; integrated
+            REST/GraphQL and real-time services.
+          </li>
+          <li>
+            Improved PWA behavior, accessibility, Core Web Vitals, cross-device
+            usability and frontend quality using automated component/E2E
+            testing.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js • Next.js • Angular • Vue.js • TypeScript
+          • Redux Toolkit • TanStack Query • RxJS • NgRx • Pinia • Tailwind CSS
+          • REST • GraphQL • PWA
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Frontend Developer</div>
+            <div class="company">Axionbots Software Private Limited • Chennai</div>
+          </div>
+          <div class="date">Nov 2023 – Apr 2024</div>
+        </div>
+        <ul>
+          <li>
+            Built FinTech and digital-asset interfaces covering trading
+            dashboards, wallets, portfolio views, order forms, transaction
+            history and market-data experiences.
+          </li>
+          <li>
+            Developed React/TypeScript applications with Redux and reusable
+            components while contributing to Angular/RxJS and Vue-based
+            data-driven interfaces.
+          </li>
+          <li>
+            Implemented WebSocket-powered live prices, transaction updates and
+            notifications with optimized high-frequency rendering and state
+            management.
+          </li>
+          <li>
+            Built responsive charts, tables, search/filter experiences, forms
+            and role-aware navigation with REST API and authentication
+            integration.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js • JavaScript • TypeScript • Angular •
+          Vue.js • Redux • RxJS • HTML5 • CSS3 • WebSockets • REST API •
+          Material UI • Bootstrap
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Frontend Developer Intern</div>
+            <div class="company">
+              Axionbots Software Private Limited • Chennai
+            </div>
+          </div>
+          <div class="date">May 2023 – Oct 2024</div>
+        </div>
+        <ul>
+          <li>
+            Contributed to full-stack web application development using
+            React.js, JavaScript, HTML5, CSS3, Node.js, and Express.js.
+            Developed reusable UI components, forms, navigation elements,
+            tables, dashboard modules, and responsive layouts.
+          </li>
+          <li>
+            Assisted in developing RESTful APIs using Node.js and Express.js,
+            implementing routing, request handling, CRUD operations, API
+            responses, and integration between frontend components and backend
+            services.
+          </li>
+          <li>
+            Worked with MongoDB for data storage, basic schema design, queries,
+            and database integration. Integrated frontend components with APIs
+            using Fetch API and asynchronous JavaScript, handling form
+            validation, loading indicators, and error states.
+          </li>
+          <li>
+            Used Flexbox, CSS Grid, and responsive styling to improve user
+            interfaces across devices. Practiced Git version control, debugging,
+            testing, and browser developer tools while participating in code
+            reviews, bug fixing, and feature enhancements under senior developer
+            guidance.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Software Developer Intern</div>
+            <div class="company">Giggso India Private Limited • Chennai</div>
+          </div>
+          <div class="date">Apr 2023 – May 2023</div>
+        </div>
+        <ul>
+          <li>
+            Worked as a Software Developer Intern, developing responsive web
+            pages, reusable UI components, forms, navigation elements, and
+            interactive features using JavaScript, React.js, HTML5, and CSS3.
+            Implemented client-side validation, event handling, Flexbox, and CSS
+            Grid to improve user experience across different screen sizes.
+          </li>
+          <li>
+            Assisted in REST API integration using Fetch API and asynchronous
+            JavaScript, handling data rendering, loading states, and error
+            messages. Used Git for version control and contributed to debugging,
+            browser testing, bug fixing, documentation, and feature enhancements
+            in collaboration with the development team.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Software Developer Intern</div>
+            <div class="company">Giottus Technology • Chennai</div>
+          </div>
+          <div class="date">June 2022 – Apr 2023</div>
+        </div>
+        <ul>
+          <li>
+            Developed responsive web applications using JavaScript, React.js,
+            HTML5, and CSS3. Built reusable UI components, forms, tables,
+            navigation elements, and data-display screens to support application
+            functionality.
+          </li>
+          <li>
+            Implemented component state management, event handling, conditional
+            rendering, client-side validation, and interactive features.
+            Improved responsive layouts using Flexbox, CSS Grid, and reusable
+            styling patterns.
+          </li>
+          <li>
+            Assisted in integrating REST APIs with frontend components using
+            asynchronous JavaScript. Handled API requests and responses, data
+            rendering, loading indicators, error messages, and supported API
+            debugging and cross-browser testing.
+          </li>
+          <li>
+            Used Git for version control and participated in code reviews,
+            testing, bug fixing, and feature enhancements. Collaborated with the
+            development team to implement requirements, troubleshoot frontend
+            issues, and maintain code quality.
+          </li>
+        </ul>
+        <div class="tech">
+          <b>Environment:</b> React.js, JavaScript, Node.js, Express.js,
+          MongoDB, MySQL, REST API, JWT, Redis, WebSockets, AWS, Docker, Nginx,
+          Git
+        </div>
+      </div>
+
+      <h2>Selected Projects</h2>
+      <div class="project-grid project-grid-p1">
+        <div class="project">
+          <h3>E-Commerce & Headless Commerce Frontend</h3>
+          <p>
+            High-performance commerce frontend covering product discovery,
+            search, filters, cart, checkout, payments, accounts and order
+            tracking using modern rendering and reusable UI architecture.
+          </p>
+          <div class="stack">
+            React • Next.js • TypeScript • Redux Toolkit • Zustand • TanStack
+            Query • SSR/SSG/ISR • GraphQL • PWA • Storybook
+          </div>
+        </div>
+        <div class="project">
+          <h3>Enterprise Angular & Micro Frontend Platform</h3>
+          <p>
+            Enterprise platform with dashboards, workflows, complex forms,
+            shared component libraries and independently deployable frontend
+            modules using Micro Frontend architecture.
+          </p>
+          <div class="stack">
+            Angular • TypeScript • RxJS • NgRx • Angular Material • Micro
+            Frontends • Module Federation • Storybook • PWA
+          </div>
+        </div>
+        <div class="project">
+          <h3>Real-Time SaaS & Cross-Platform Mobile Platform</h3>
+          <p>
+            Real-time web/mobile product with dashboards, chat, presence,
+            notifications, profiles, activity feeds and responsive
+            cross-platform experiences.
+          </p>
+          <div class="stack">
+            React • Next.js • React Native • Expo • TypeScript • Zustand •
+            TanStack Query • WebSockets • Socket.IO • GraphQL
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="page page-two">
+      <h2 style="margin-top: 0">Selected Projects — Continued</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h3>Vue/Nuxt Design System & Analytics Platform</h3>
+          <p>
+            Built an enterprise analytics and dashboard frontend using Vue.js,
+            Vue 3, Nuxt.js and TypeScript. Developed dashboards, reports, data
+            tables, search, filters, forms, charts and role-based interfaces
+            using Composition API, Pinia, Vue Router and reusable composables.
+            Created Design System components using Storybook, design tokens and
+            theming; integrated REST, GraphQL and WebSockets while supporting
+            SSR, PWA, accessibility and frontend performance optimization.
+          </p>
+          <div class="stack">
+            Vue.js • Vue 3 • Nuxt.js • TypeScript • Pinia • Vue Router • Vuetify
+            • Tailwind CSS • Storybook • D3.js • Chart.js • GraphQL • PWA •
+            Cypress • Playwright
+          </div>
+        </div>
+      </div>
+
+      <h2>Frontend Engineering Strengths</h2>
+      <div class="strength-grid">
+        <div>
+          <b>Frontend Architecture</b
+          ><span
+            >Component Architecture, SPA, SSR, SSG, ISR, CSR, PWA, Micro
+            Frontends, Module Federation, reusable modules, shared libraries and
+            scalable state architecture.</span
+          >
+        </div>
+        <div>
+          <b>React Engineering</b
+          ><span
+            >React.js, Next.js, Hooks, custom hooks, Redux Toolkit, Zustand,
+            Context API, TanStack Query, React Hook Form, Server/Client
+            Components and App Router.</span
+          >
+        </div>
+        <div>
+          <b>Angular Engineering</b
+          ><span
+            >Angular, TypeScript, RxJS, NgRx, Angular Material, Reactive Forms,
+            Signals, dependency injection, routing, guards and
+            interceptors.</span
+          >
+        </div>
+        <div>
+          <b>Vue Engineering</b
+          ><span
+            >Vue.js, Vue 3, Nuxt.js, Composition API, Pinia, Vue Router,
+            reusable composables, SSR and component-driven architecture.</span
+          >
+        </div>
+        <div>
+          <b>Mobile & Cross-Platform</b
+          ><span
+            >React Native, Expo, Ionic, Capacitor, navigation, responsive mobile
+            interfaces, local storage and API-driven cross-platform
+            applications.</span
+          >
+        </div>
+        <div>
+          <b>UI Engineering</b
+          ><span
+            >HTML5, CSS3, Sass/SCSS, Tailwind CSS, Bootstrap, Material UI,
+            Vuetify, responsive/mobile-first design, Flexbox, Grid and
+            Figma-to-Code.</span
+          >
+        </div>
+        <div>
+          <b>Design Systems</b
+          ><span
+            >Storybook, reusable component libraries, design tokens, theming,
+            shared UI patterns, component documentation and consistent
+            enterprise interfaces.</span
+          >
+        </div>
+        <div>
+          <b>Performance</b
+          ><span
+            >Core Web Vitals, Lighthouse, lazy loading, code splitting,
+            memoization, tree shaking, caching, bundle optimization, image
+            optimization and rendering performance.</span
+          >
+        </div>
+        <div>
+          <b>Accessibility</b
+          ><span
+            >WCAG, ARIA, semantic HTML, keyboard accessibility, responsive
+            design, cross-browser compatibility and cross-device
+            usability.</span
+          >
+        </div>
+        <div>
+          <b>Testing & Quality</b
+          ><span
+            >Jest, Vitest, React Testing Library, Cypress, Playwright, unit
+            testing, component testing, integration testing and end-to-end
+            automation.</span
+          >
+        </div>
+        <div>
+          <b>API & Real-Time UI</b
+          ><span
+            >REST API, GraphQL, Apollo Client, Axios, Fetch API, WebSockets,
+            Socket.IO, JWT/OAuth integration and role-based frontend
+            authorization.</span
+          >
+        </div>
+        <div>
+          <b>Tooling & Delivery</b
+          ><span
+            >Vite, Webpack, Babel, npm, pnpm, ESLint, Prettier, Git, GitHub,
+            CI/CD, debugging, code review and production frontend support.</span
+          >
+        </div>
+      </div>
+
+      <h2>Education</h2>
+      <div class="edu">
+        <div>
+          <b>B.Tech / B.E. — Computer Science & Engineering</b>
+          <div class="small">
+            Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal • Full Time
+          </div>
+        </div>
+        <div class="date">2017 – 2021</div>
+      </div>
+
+      <h2>Career Highlights</h2>
+      <ul class="value-list">
+        <li>
+          <b>4+ years of frontend engineering</b> across customer-facing web
+          applications, enterprise platforms, dashboards, transaction-heavy
+          workflows and real-time product experiences.
+        </li>
+        <li>
+          Broad frontend ecosystem exposure spanning React.js, Next.js, Angular,
+          Vue.js, Nuxt.js, JavaScript, TypeScript and cross-platform development
+          using React Native and Expo.
+        </li>
+        <li>
+          Built scalable UI architectures using component-driven development,
+          Redux Toolkit, Zustand, TanStack Query, RxJS, NgRx and Pinia.
+        </li>
+        <li>
+          Experienced across SPA, PWA, SSR, SSG, ISR, Micro Frontends, Module
+          Federation, Design Systems, Storybook and reusable component
+          libraries.
+        </li>
+        <li>
+          Developed responsive and accessible interfaces using HTML5, CSS3,
+          Sass/SCSS, Tailwind CSS, Material UI, Bootstrap, WCAG and ARIA
+          practices.
+        </li>
+        <li>
+          Built real-time and API-driven experiences using REST, GraphQL,
+          WebSockets and Socket.IO with authentication and role-based UI flows.
+        </li>
+        <li>
+          Strong frontend performance focus across Core Web Vitals, Lighthouse,
+          code splitting, lazy loading, caching, bundle optimization and
+          efficient rendering.
+        </li>
+        <li>
+          Experience with unit, component, integration and E2E testing using
+          Jest, Vitest, React Testing Library, Cypress and Playwright.
+        </li>
+        <li>
+          Product exposure across SaaS, e-commerce, TravelTech, FinTech,
+          analytics dashboards, real-time applications, enterprise platforms and
+          AI-enabled user interfaces.
+        </li>
+        <li>
+          <b>15 days or less notice period</b>; aligned to Frontend Developer,
+          Frontend Engineer, UI Developer, React Developer, Angular Developer,
+          Vue Developer, React Native Developer and Frontend SDE opportunities.
+        </li>
+      </ul>
+
+      <div class="closing-band">
+        <b>Additional Frontend Technologies</b>
+        <span
+          >React.js • Next.js • Angular • AngularJS • Vue.js • Vue 3 • Nuxt.js •
+          React Native • Expo • Ionic • Capacitor • Redux Toolkit • Zustand •
+          TanStack Query • RxJS • NgRx • Pinia • Vuex • React Router • Vue
+          Router • HTML5 • CSS3 • Sass/SCSS • Tailwind CSS • Bootstrap •
+          Material UI • Angular Material • Vuetify • Ant Design • Storybook •
+          Design Systems • SPA • PWA • SSR • SSG • ISR • CSR • Micro Frontends •
+          Module Federation • REST API • GraphQL • Apollo Client • Axios • Fetch
+          API • WebSockets • Socket.IO • JWT • OAuth • WCAG • ARIA • Core Web
+          Vitals • Lighthouse • Jest • Vitest • React Testing Library • Cypress
+          • Playwright • Vite • Webpack • Babel • npm • pnpm • ESLint • Prettier
+          • Git • GitHub • CI/CD</span
+        >
+      </div>
+
+      <h2>Frontend Search Alignment</h2>
+      <p class="summary">
+        Frontend Developer • Frontend Engineer • Front End Developer • UI
+        Developer • UI Engineer • Web Developer • JavaScript Developer •
+        TypeScript Developer • React Developer • React.js Developer • Next.js
+        Developer • Angular Developer • Vue.js Developer • Nuxt.js Developer •
+        React Native Developer • Mobile App Developer • Cross-Platform Developer
+        • UI/UX Developer • Frontend Software Engineer • Software Engineer •
+        Software Development Engineer • SDE - Frontend
+      </p>
+
+    </section>
+
+    <script>
+      document.addEventListener("keydown", (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "p") {
+        }
+      });
+    </script>
+  </body>
+</html>
